@@ -1,0 +1,647 @@
+R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> 2 + 2
+[1] 4
+> 2*2
+[1] 4
+> 4-2
+[1] 2
+> 
+> "My name is Brandan"
+[1] "My name is Brandan"
+> 
+> paste("My", "name", "is" "Brandan")
+Error: unexpected string constant in "paste("My", "name", "is" "Brandan""
+> paste("My", "name", "is", "Brandan")
+[1] "My name is Brandan"
+> 2 < 3
+[1] TRUE
+> 2 > 3
+[1] FALSE
+> 2 == 3
+[1] FALSE
+> 2=3
+Error in 2 = 3 : invalid (do_set) left-hand side to assignment
+> 2==3
+[1] FALSE
+> 1=1
+Error in 1 = 1 : invalid (do_set) left-hand side to assignment
+> 2 == 3
+[1] FALSE
+> 1 = 1
+Error in 1 = 1 : invalid (do_set) left-hand side to assignment
+> 2 == 3
+[1] FALSE
+> 2 > 1
+[1] TRUE
+> 2.1 = 2
+Error in 2.1 = 2 : invalid (do_set) left-hand side to assignment
+> 2 == 3
+[1] FALSE
+> 2 > 1
+[1] TRUE
+> 2 > 1
+[1] TRUE
+> 1 < 2
+[1] TRUE
+> 
+> 2 + NA
+[1] NA
+> number <- 42
+> number
+[1] 42
+> computer_name <- "HAL 9000"
+> computer_name
+[1] "HAL 9000"
+> x <- 2
+> y <- 5
+> x * y
+[1] 10
+> x + 9
+[1] 11
+> x <- 5
+> z <- "bacon"
+> 
+> y <- -5
+> x + y
+[1] 0
+> 
+> a <- 10
+> b <- 20
+> a <- b
+> a
+[1] 20
+> "Some words"
+[1] "Some words"
+> length("Some words")
+[1] 1
+> many <- c(1, 5, 2, 3, 7)
+> many
+[1] 1 5 2 3 7
+> many * 2
+[1]  2 10  4  6 14
+> 2 + "many"
+Error in 2 + "many" : non-numeric argument to binary operator
+> 
+> 2 + many
+[1] 3 7 4 5 9
+> 
+> names <-(tom, dick, harry)
+Error: unexpected ',' in "names <-(tom,"
+> 
+> names <- (tom, dick, harry)
+Error: unexpected ',' in "names <- (tom,"
+> 
+> names <- c(tom, dick, harry)
+Error: object 'tom' not found
+> 
+> names <- c("tom", "dick", "harry")
+> 
+> c(1, 2, 3, 4, 5) + c(10, 20)
+longer object length is not a multiple of shorter object length[1] 11 22 13 24 15
+> book_prices <- c(19.99, 25.78, 5.33, 45.00, 22.45, 21.23)
+> sum(book_prices)
+[1] 139.78
+> mean(book_prices)
+[1] 23.29667
+> mean(book_prices)
+[1] 23.29667
+> mean(book_prices)
+[1] 23.29667
+> median(book_prices)
+[1] 21.84
+> write(book_prices)
+> write(book_prices)
+> write (book_prices)
+> min(book_prices)
+[1] 5.33
+> max(book_prices)
+[1] 45
+> length(book_prices)
+[1] 6
+> length(more_books)
+Error: object 'more_books' not found
+> more_books <- c(19.99, NA, 25.78, 5.33, NA, 45.00, 22.45, NA, 21.23)
+> length(more_books)
+[1] 9
+> sum(more_books)
+[1] NA
+> ?arguements
+No documentation for ‘arguements’ in specified packages and libraries:
+you could try ‘??arguements’
+> 
+> ?arguments
+No documentation for ‘arguments’ in specified packages and libraries:
+you could try ‘??arguments’
+> 
+> ?Arguments
+No documentation for ‘Arguments’ in specified packages and libraries:
+you could try ‘??Arguments’
+> 
+> 
+> 
+> ?sum
+> 
+> sum(more_books, NA, na.rm = TRUE)
+[1] 139.78
+> 
+> sum(more_books, NA, na.rm = TRUE)
+[1] 139.78
+> ?mean
+> 
+> mean(more_books, NA, na.rm = TRUE)
+Error in mean.default(more_books, NA, na.rm = TRUE) : 
+  'trim' must be numeric of length one
+> 
+> mean(more_books, trim = 0, NA, na.rm = TRUE)
+[1] 23.29667
+> 
+> sum(more_books, NA, na.rm = TRUE)
+[1] 139.78
+> ?mean
+> ?max
+> 
+> mean(more_books, trim = 0, NA, na.rm = TRUE)
+[1] 23.29667
+> min(more_books, na.rm = FALSE)
+[1] NA
+> 
+> mean(more_books, trim = 0, NA, na.rm = TRUE)
+[1] 23.29667
+> min(more_books, NA, na.rm = TRUE)
+[1] 5.33
+> 
+> mean(more_books, trim = 0, NA, na.rm = TRUE)
+[1] 23.29667
+> min(more_books, NA, na.rm = TRUE)
+[1] 5.33
+> max(more_books, NA, na.rm = TRUE)
+[1] 45
+> 
+> library(historydata)
+> library(dplyr)
+
+Attaching package: �dplyr�
+
+The following objects are masked from �package:stats�:
+
+    filter, lag
+
+The following objects are masked from �package:base�:
+
+    intersect, setdiff, setequal, union
+
+> library(dplyr_package)
+Error in library(dplyr_package) : 
+  there is no package called ‘dplyr_package’
+> library(dplyr package)
+Error: unexpected symbol in "library(dplyr package"
+> library(dplyr)
+> library(dplyr)
+> library(dplyr)
+> help(package = "historydata")
+> head(paulist_missions, 10)
+> str(paulist_missions)
+Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	841 obs. of  17 variables:
+ $ mission_number: int  1 2 3 4 5 6 7 8 9 10 ...
+ $ church        : chr  "St. Joseph's Church" "St. Michael's Church" "St. Mary's Church" "Church of St. John Evangelist" ...
+ $ city          : chr  "New York" "Loretto" "Hollidaysburg" "Johnstown" ...
+ $ state         : chr  "NY" "PA" "PA" "PA" ...
+ $ date_start    : Date, format: "1851-04-06" "1851-04-27" "1851-05-18" "1851-05-31" ...
+ $ date_end      : Date, format: "1851-04-20" "1851-05-11" "1851-05-28" "1851-06-08" ...
+ $ year          : num  1851 1851 1851 1851 1851 ...
+ $ decade        : chr  "1850s" "1850s" "1850s" "1850s" ...
+ $ duration_days : int  14 14 10 8 14 15 11 7 9 11 ...
+ $ duration_weeks: Ord.factor w/ 4 levels "1 week or less"<..: 2 2 2 2 2 3 2 1 2 2 ...
+ $ confessions   : int  6000 1700 1000 1000 4000 7000 1000 270 1000 600 ...
+ $ converts      : int  0 0 0 0 0 0 0 0 0 3 ...
+ $ order         : chr  "Redemptorist" "Redemptorist" "Redemptorist" "Redemptorist" ...
+ $ lat           : num  40.7 40.5 40.4 40.3 40.7 ...
+ $ long          : num  -74 -78.6 -78.4 -78.9 -74 ...
+ $ volume        : int  1 1 1 1 1 1 1 1 1 1 ...
+ $ page          : int  1 6 11 12 15 18 20 22 22 23 ...
+> glimpse(paulist_missions)
+Observations: 841
+Variables: 17
+$ mission_number <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 2...
+$ church         <chr> "St. Joseph's Church", "St. Michael's Church", "St. Mary's Church", "Church of St. John Evangelist",...
+$ city           <chr> "New York", "Loretto", "Hollidaysburg", "Johnstown", "New York", "New York", "Erie", "Cussewago", "Y...
+$ state          <chr> "NY", "PA", "PA", "PA", "NY", "NY", "PA", "PA", "PA", "NY", "NY", "NY", "MI", "PA", "PA", "NY", "WV"...
+$ date_start     <date> 1851-04-06, 1851-04-27, 1851-05-18, 1851-05-31, 1851-09-28, 1851-10-19, 1851-11-17, 1851-12-01, 185...
+$ date_end       <date> 1851-04-20, 1851-05-11, 1851-05-28, 1851-06-08, 1851-10-12, 1851-11-03, 1851-11-28, 1851-12-08, 185...
+$ year           <dbl> 1851, 1851, 1851, 1851, 1851, 1851, 1851, 1851, 1851, 1852, 1852, 1852, 1852, 1852, 1852, 1852, 1852...
+$ decade         <chr> "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "...
+$ duration_days  <int> 14, 14, 10, 8, 14, 15, 11, 7, 9, 11, 28, 14, 14, 14, 12, 10, 10, 14, 14, 14, 10, 14, 14, 14, 13, 7, ...
+$ duration_weeks <ord> 2 weeks or less, 2 weeks or less, 2 weeks or less, 2 weeks or less, 2 weeks or less, 3 weeks or less...
+$ confessions    <int> 6000, 1700, 1000, 1000, 4000, 7000, 1000, 270, 1000, 600, 3100, 4000, 3000, 3000, 1700, 1400, 1250, ...
+$ converts       <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 7, 10, 16, 3,...
+$ order          <chr> "Redemptorist", "Redemptorist", "Redemptorist", "Redemptorist", "Redemptorist", "Redemptorist", "Red...
+$ lat            <dbl> 40.71435, 40.50313, 40.42729, 40.32674, 40.71435, 40.71435, 42.12922, 41.79854, 40.27979, 43.04485, ...
+$ long           <dbl> -74.00597, -78.63030, -78.38890, -78.92197, -74.00597, -74.00597, -80.08506, -80.20982, -79.36559, -...
+$ volume         <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+$ page           <int> 1, 6, 11, 12, 15, 18, 20, 22, 22, 23, 27, 28, 31, 33, 33, 35, 36, 37, 38, 39, 40, 41, 42, 45, 51, 51...
+> 
+> head(paulist_missions$city, 20)
+ [1] "New York"      "Loretto"       "Hollidaysburg" "Johnstown"     "New York"      "New York"      "Erie"         
+ [8] "Cussewago"     "Youngstown"    "Saratoga"      "Troy"          "Albany"        "Detroit"       "Philadelphia" 
+[15] "Philadelphia"  "Cohoes"        "Wheeling"      "Cincinnati"    "Louisville"    "Albany"       
+> (paulist_missions$convers, 1 - 20)
+Error: unexpected ',' in "(paulist_missions$convers,"
+> 
+> (paulist_missions$convers, 1-20)
+Error: unexpected ',' in "(paulist_missions$convers,"
+> 
+> (paulist_missions$convers, 1|20)
+Error: unexpected ',' in "(paulist_missions$convers,"
+> 
+> (paulist_missions$converts, 1,20)
+Error: unexpected ',' in "(paulist_missions$converts,"
+> 
+> (paulist_missions$converts, 20)
+Error: unexpected ',' in "(paulist_missions$converts,"
+> 
+> head(paulist_missions$converts, 20)
+ [1] 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 3 0 3 3
+> 
+> head(paulist_missions$convers, mean)
+Unknown or uninitialised column: 'convers'.Error in n < 0L : 
+  comparison (3) is possible only for atomic and list types
+> 
+> head(paulist_missions$converts, mean)
+Error in n < 0L : 
+  comparison (3) is possible only for atomic and list types
+> 
+> mean(paulist_missions$converts)
+[1] 2.507729
+> 
+> mean(paulist_missions$converts)
+[1] 2.507729
+> max(paulist_missions$converts)
+[1] 50
+> mean(paulist_missions$confessions)
+[1] NA
+> max(paulist_missions$confessions)
+[1] NA
+> 
+> mean(paulist_missions$converts)
+[1] 2.507729
+> max(paulist_missions$converts)
+[1] 50
+> mean(paulist_missions$confessions)
+[1] NA
+> max(paulist_missions$confessions,NA, na.rm = TRUE)
+[1] 11650
+> 
+> mean(paulist_missions$converts)
+[1] 2.507729
+> max(paulist_missions$converts)
+[1] 50
+> mean(paulist_missions$confessions,NA, na.rm = TRUE)
+Error in mean.default(paulist_missions$confessions, NA, na.rm = TRUE) : 
+  'trim' must be numeric of length one
+> mean(paulist_missions$converts)
+[1] 2.507729
+> max(paulist_missions$converts)
+[1] 50
+> mean(paulist_missions$confessions,trim = 0, NA, na.rm = TRUE)
+[1] 1760.832
+> max(paulist_missions$confessions,NA, na.rm = TRUE)
+[1] 11650
+> 
+> ?ratio
+No documentation for ‘ratio’ in specified packages and libraries:
+you could try ‘??ratio’
+> 
+> ?ratio
+No documentation for ‘ratio’ in specified packages and libraries:
+you could try ‘??ratio’
+> 
+> ratio(paulist_missions)
+Error in ratio(paulist_missions) : could not find function "ratio"
+> 
+> ratio(paulist_missions$confessions, paulist_missions$converts)
+Error in ratio(paulist_missions$confessions, paulist_missions$converts) : 
+  could not find function "ratio"
+> 
+> install.packages("ratio)
++ install.packages("ratio")
+Error: unexpected symbol in:
+"install.packages("ratio)
+install.packages("ratio"
+> install.packages(ratio)
+Error in install.packages : object 'ratio' not found
+> install.packages("ratio-package")
+Installing package into ‘C:/Users/bpbuc/Documents/R/win-library/3.5’
+(as ‘lib’ is unspecified)
+Warning in install.packages :
+  package ‘ratio-package’ is not available (for R version 3.5.2)
+> library(ratio-package)
+Error in library(ratio - package) : 'package' must be of length 1
+> library("ratio-package")
+Error in library("ratio-package") : 
+  there is no package called ‘ratio-package’
+> library(ratio)
+Error in library(ratio) : there is no package called ‘ratio’
+> install.packages("ratio")
+Installing package into ‘C:/Users/bpbuc/Documents/R/win-library/3.5’
+(as ‘lib’ is unspecified)
+Warning in install.packages :
+  package ‘ratio’ is not available (for R version 3.5.2)
+> # I received the following message when I attemped to install the ratio package "Warning in install.packages :
+>   package ‘ratio’ is not available (for R version 3.5.2)"
+Error: unexpected input in "  package ‘"
+> # I received the following message when I attemped to install the ratio package "Warning in install.packages 
+> # package ‘ratio’ is not available (for R version 3.5.2)" ""
+> 
+> plot(paulist_missions$confessions, paulist_missions$converts)
+> title("Confessions versus conversions")
+> # I received the following message when I attemped to install the ratio package "Warning in install.packages 
+> # package ‘ratio’ is not available (for R version 3.5.2)" ""
+> 
+> ?sum
+> # I received the following message when I attemped to install the ratio package "Warning in install.packages 
+> # package ‘ratio’ is not available (for R version 3.5.2)" ""
+> 
+> ?ratio
+No documentation for ‘ratio’ in specified packages and libraries:
+you could try ‘??ratio’
+> plot(paulist_missions$confessions, paulist_missions$converts)
+> title("Confessions versus conversions")
+> 
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> help(package = "historydata")`
++ 
+Error: Incomplete expression: help(package = "historydata")`
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> help(package = "historydata")
+> 
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> #help(package = "historydata")
+> head(naval_promotions, 20)
+> 
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> #help(package = "historydata")
+> head(naval_promotions, 50)
+> 
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> #help(package = "historydata")
+> head(sama, 50)
+Error in head(sama, 50) : object 'sama' not found
+> 
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> #help(package = "historydata")
+> head(sarna, 50)
+> 
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> #help(package = "historydata")
+> head(catholic_dioceses, 50)
+> 
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> #help(package = "historydata")
+> head(methodists, 50)
+> 
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> #help(package = "historydata")
+> head(quasi_war, 50)
+> 
+> #plot(paulist_missions$confessions, paulist_missions$converts)
+> #title("Confessions versus conversions")
+> #help(package = "historydata")
+> head(presbyterians, 50)
+> 
+> plot(presbyterians$received_exam, presbyterians$baptsims_adults)
+Unknown or uninitialised column: 'baptsims_adults'.
+> title("Exams v.Baptisms)
++ 
++ head(presbyterians, 50)
++ 
+Error: Incomplete expression: title("Exams v.Baptisms)
+
+head(presbyterians, 50)
+> plot(presbyterians$received_exam, presbyterians$baptsims_adults)
+Unknown or uninitialised column: 'baptsims_adults'.
+> title("Exams v.Baptisms)
+Error: Incomplete expression: title("Exams v.Baptisms)
+> plot(presbyterians$received_exam, presbyterians$baptsims_adults)
+Unknown or uninitialised column: 'baptsims_adults'.
+> title ("Exams v.Baptisms)
+Error: Incomplete expression: title ("Exams v.Baptisms)
+> plot(presbyterians$received_exam, presbyterians$baptsims_adults)
+Unknown or uninitialised column: 'baptsims_adults'.
+> title ("Exams v. Baptisms")
+> plot(presbyterians$received_exam, presbyterians$baptsims_adults)
+Unknown or uninitialised column: 'baptsims_adults'.
+> title("Exams versus Baptisms")
+> plot(presbyterians$received_exam, presbyterians$baptisms_adult)
+Unknown or uninitialised column: 'baptisms_adult'.
+> title("Exams versus Baptisms")
+> #plot(presbyterians$received_exam, presbyterians$baptisms_adult)
+> #title("Exams versus Baptisms")
+> head(presbyterians, 50)
+> plot(presbyterians$received_exam, presbyterians$baptisms_adults)
+> title("Exams versus Baptisms")
+> #head(presbyterians, 50)
+> plot(presbyterians$received_exam, presbyterians$baptisms_adults)
+> title("Exams versus Baptisms")
+> 42
+[1] 42
+> 3.1
+[1] 3.1
+> 2 + 2
+[1] 4
+> 2*2
+[1] 4
+> 4-2
+[1] 2
+> 
+> "Hello, beginning R programmer"
+[1] "Hello, beginning R programmer"
+> "My name is Brandan"
+[1] "My name is Brandan"
+> 
+> paste("Hello", "everybody")
+[1] "Hello everybody"
+> paste("My", "name", "is", "Brandan")
+[1] "My name is Brandan"
+> # This is true
+> TRUE
+[1] TRUE
+> 
+> # This is false
+> FALSE
+[1] FALSE
+> 2 < 3
+[1] TRUE
+> 2 > 3
+[1] FALSE
+> 2 == 3
+[1] FALSE
+> 2 == 3
+[1] FALSE
+> 2 > 1
+[1] TRUE
+> 2 > 1
+[1] TRUE
+> 1 < 2
+[1] TRUE
+> 
+> NA
+[1] NA
+> 2 + NA
+[1] NA
+> number <- 42
+> number
+[1] 42
+> computer_name <- "HAL 9000"
+> computer_name
+[1] "HAL 9000"
+> x <- 2
+> y <- 5
+> x * y
+[1] 10
+> x + 9
+[1] 11
+> x <- 5
+> z <- "bacon"
+> 
+> y <- -5
+> x + y
+[1] 0
+> 
+> "Some words"
+[1] "Some words"
+> length("Some words")
+[1] 1
+> many <- c(1, 5, 2, 3, 7)
+> many
+[1] 1 5 2 3 7
+> # 5 
+> many * 2
+[1]  2 10  4  6 14
+> 2 + many
+[1] 3 7 4 5 9
+> 
+> names <- c("tom", "dick", "harry")
+> 
+> c(1, 2, 3, 4, 5) + c(10, 20)
+longer object length is not a multiple of shorter object length[1] 11 22 13 24 15
+> book_prices <- c(19.99, 25.78, 5.33, 45.00, 22.45, 21.23)
+> sum(book_prices)
+[1] 139.78
+> mean(book_prices)
+[1] 23.29667
+> median(book_prices)
+[1] 21.84
+> min(book_prices)
+[1] 5.33
+> max(book_prices)
+[1] 45
+> book_prices >= mean(book_prices)
+[1] FALSE  TRUE FALSE  TRUE FALSE FALSE
+> more_books <- c(19.99, NA, 25.78, 5.33, NA, 45.00, 22.45, NA, 21.23)
+> length(more_books)
+[1] 9
+> sum(more_books)
+[1] NA
+> sum(more_books, NA, na.rm = TRUE)
+[1] 139.78
+> ?mean
+> ?max
+> 
+> mean(more_books, trim = 0, NA, na.rm = TRUE)
+[1] 23.29667
+> min(more_books, NA, na.rm = TRUE)
+[1] 5.33
+> max(more_books, NA, na.rm = TRUE)
+[1] 45
+> 
+> library(historydata)
+> library(dplyr)
+> head(paulist_missions, 10)
+> str(paulist_missions)
+Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	841 obs. of  17 variables:
+ $ mission_number: int  1 2 3 4 5 6 7 8 9 10 ...
+ $ church        : chr  "St. Joseph's Church" "St. Michael's Church" "St. Mary's Church" "Church of St. John Evangelist" ...
+ $ city          : chr  "New York" "Loretto" "Hollidaysburg" "Johnstown" ...
+ $ state         : chr  "NY" "PA" "PA" "PA" ...
+ $ date_start    : Date, format: "1851-04-06" "1851-04-27" "1851-05-18" "1851-05-31" ...
+ $ date_end      : Date, format: "1851-04-20" "1851-05-11" "1851-05-28" "1851-06-08" ...
+ $ year          : num  1851 1851 1851 1851 1851 ...
+ $ decade        : chr  "1850s" "1850s" "1850s" "1850s" ...
+ $ duration_days : int  14 14 10 8 14 15 11 7 9 11 ...
+ $ duration_weeks: Ord.factor w/ 4 levels "1 week or less"<..: 2 2 2 2 2 3 2 1 2 2 ...
+ $ confessions   : int  6000 1700 1000 1000 4000 7000 1000 270 1000 600 ...
+ $ converts      : int  0 0 0 0 0 0 0 0 0 3 ...
+ $ order         : chr  "Redemptorist" "Redemptorist" "Redemptorist" "Redemptorist" ...
+ $ lat           : num  40.7 40.5 40.4 40.3 40.7 ...
+ $ long          : num  -74 -78.6 -78.4 -78.9 -74 ...
+ $ volume        : int  1 1 1 1 1 1 1 1 1 1 ...
+ $ page          : int  1 6 11 12 15 18 20 22 22 23 ...
+> glimpse(paulist_missions)
+Observations: 841
+Variables: 17
+$ mission_number <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 2...
+$ church         <chr> "St. Joseph's Church", "St. Michael's Church", "St. Mary's Church", "Church of St. John Evangelist",...
+$ city           <chr> "New York", "Loretto", "Hollidaysburg", "Johnstown", "New York", "New York", "Erie", "Cussewago", "Y...
+$ state          <chr> "NY", "PA", "PA", "PA", "NY", "NY", "PA", "PA", "PA", "NY", "NY", "NY", "MI", "PA", "PA", "NY", "WV"...
+$ date_start     <date> 1851-04-06, 1851-04-27, 1851-05-18, 1851-05-31, 1851-09-28, 1851-10-19, 1851-11-17, 1851-12-01, 185...
+$ date_end       <date> 1851-04-20, 1851-05-11, 1851-05-28, 1851-06-08, 1851-10-12, 1851-11-03, 1851-11-28, 1851-12-08, 185...
+$ year           <dbl> 1851, 1851, 1851, 1851, 1851, 1851, 1851, 1851, 1851, 1852, 1852, 1852, 1852, 1852, 1852, 1852, 1852...
+$ decade         <chr> "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "1850s", "...
+$ duration_days  <int> 14, 14, 10, 8, 14, 15, 11, 7, 9, 11, 28, 14, 14, 14, 12, 10, 10, 14, 14, 14, 10, 14, 14, 14, 13, 7, ...
+$ duration_weeks <ord> 2 weeks or less, 2 weeks or less, 2 weeks or less, 2 weeks or less, 2 weeks or less, 3 weeks or less...
+$ confessions    <int> 6000, 1700, 1000, 1000, 4000, 7000, 1000, 270, 1000, 600, 3100, 4000, 3000, 3000, 1700, 1400, 1250, ...
+$ converts       <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 7, 10, 16, 3,...
+$ order          <chr> "Redemptorist", "Redemptorist", "Redemptorist", "Redemptorist", "Redemptorist", "Redemptorist", "Red...
+$ lat            <dbl> 40.71435, 40.50313, 40.42729, 40.32674, 40.71435, 40.71435, 42.12922, 41.79854, 40.27979, 43.04485, ...
+$ long           <dbl> -74.00597, -78.63030, -78.38890, -78.92197, -74.00597, -74.00597, -80.08506, -80.20982, -79.36559, -...
+$ volume         <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+$ page           <int> 1, 6, 11, 12, 15, 18, 20, 22, 22, 23, 27, 28, 31, 33, 33, 35, 36, 37, 38, 39, 40, 41, 42, 45, 51, 51...
+> 
+> head(paulist_missions$city, 20)
+ [1] "New York"      "Loretto"       "Hollidaysburg" "Johnstown"     "New York"      "New York"      "Erie"         
+ [8] "Cussewago"     "Youngstown"    "Saratoga"      "Troy"          "Albany"        "Detroit"       "Philadelphia" 
+[15] "Philadelphia"  "Cohoes"        "Wheeling"      "Cincinnati"    "Louisville"    "Albany"       
+> head(paulist_missions$converts, 20)
+ [1] 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 3 0 3 3
+> 
+> mean(paulist_missions$converts)
+[1] 2.507729
+> max(paulist_missions$converts)
+[1] 50
+> mean(paulist_missions$confessions,trim = 0, NA, na.rm = TRUE)
+[1] 1760.832
+> max(paulist_missions$confessions,NA, na.rm = TRUE)
+[1] 11650
+> 
+> # I received the following message when I attemped to install the ratio package "Warning in install.packages 
+> # package ‘ratio’ is not available (for R version 3.5.2)" ""
+> 
+> plot(paulist_missions$confessions, paulist_missions$converts)
+> title("Confessions versus conversions")
+> plot(presbyterians$received_exam, presbyterians$baptisms_adults)
+> title("Exams versus Baptisms")
